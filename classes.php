@@ -37,6 +37,7 @@ $cola = new Beverage('black', 2.0);
 
 //echo "Temperature: {$cola->getInfo()}";
 echo $cola->getInfo() ;
+echo "<br>";
 echo "Temperature: {$cola->getTemperature()}";
 
 
