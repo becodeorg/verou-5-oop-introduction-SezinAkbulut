@@ -5,10 +5,10 @@ declare(strict_types=1);
 /* EXERCISE 3
 
 
-TODO: Make all properties private.
+
 TODO: Make all the other prints work without error.
 TODO: After fixing the errors. Change the color of Duvel to light instead of blond and also print this new color on the screen after all the other things that were already printed (to be sure that the color has changed).
-TODO: Create a new private method in the Beer class called beerInfo which returns "Hi i'm Duvel and have an alcochol percentage of 8.5 and I have a light color."
+
 
 Make sure that you use the variables and not just this text line.
 
@@ -20,8 +20,6 @@ USE TYPEHINTING EVERYWHERE!
 
 
 
-
-//TODO: Copy the code of exercise 2 to here and delete everything related to cola
 class Beverage
 {
     private $color;
@@ -56,9 +54,57 @@ class Beer extends Beverage
         parent::__construct($color, $price, $temperature);
         $this->name = $name;
         $this->alcoholPercentage = $alcoholPercentage;
+        $this->color = $color;
     }
 
+    private function beerInfo(): string
+    {
+        return "Hi, I'm {$this->name} and have an alcohol percentage of {$this->alcoholPercentage} and I have a {$this->color} color.";
+    }
+
+    public function getAlcoholPercentage(): float
+    {
+        return $this->alcoholPercentage;
+    }
+
+    public function getTemperature(): string
+    {
+        return $this->getTemperature();
+    }
+
+    public function getColor(): string
+    {
+        return $this->color;
+    }
+
+    public function printBeerInfo()
+    {
+        echo $this->beerInfo();
+    }
 }
+
+// Instantiate an object representing Duvel
+$duvel = new Beer('Duvel', 8.5, 'light', 3.5);
+
+// Print the color on the screen
+echo "Color: {$duvel->getColor()}";
+
+// Print the getInfo on the screen
+echo $duvel->getInfo();
+
+// Change the color of Duvel to light
+$duvel->__construct('Duvel', 8.5, 'light', 3.5);
+
+// Print the new color on the screen
+echo "New Color: {$duvel->getColor()}";
+
+// Print the beerInfo on the screen
+$duvel->printBeerInfo();
+
+
+
+
+
 
 
 
