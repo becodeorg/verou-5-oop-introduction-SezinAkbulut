@@ -28,9 +28,13 @@ public function __construct(string $color, float $price, string $temperature = '
 //TODO: Instantiate an object which represents cola. Make sure that the color is set to black, the price equals 2 euro and the temperature to cold automatically
 $cola = new Beverage('black', 2.0);
 
-
  //print the getInfo on the screen.
 //TODO: Print the temperature on the screen.
+// Print the temperature on the screen
+echo "Temperature: {$cola->getInfo()}";
+
+
+
 
 //USE TYPEHINTING EVERYWHERE!
 
